@@ -4,7 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
     <title>SheCodes Testing</title>
   </head>
-  <body></body>
+  <body>
+     <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="city-search"
+              />
+            </div>
+            <div class="col-3">
+                <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+                id="submit-city"
+                />
+            </div>
+        </div>
+    </form>
+    <button id = "current-location-button"> Current Location</button>
+        <h1 id = "city">Sydney NSW, Australia</h1>
+        <ul>
+          <li id="date">Wednesday 22:00</li>
+          <li class = "clouds" id = "cloud-cover">Partly Cloudy</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <form id = change-temp>
+              <div class="float-left">
+                <span class="temperature" id="temp">19</span>
+                <span class="units"> <a href="#" id = "celsius-link">°C</span> </a> |
+                <span > <a href="#" id="fahrenheit-link">°F </a> </span>
+              </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: <span id = "precipitation"> 0 </span> % </li>
+              <li> Humidity: <span id = "humidity"> 77</span> %</li>
+              <li> Wind: <span id = "wind-speed"> 8 </span> km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
